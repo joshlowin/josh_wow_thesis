@@ -13,6 +13,21 @@ datagroup: josh_wow_thesis_default_datagroup {
 
 persist_with: josh_wow_thesis_default_datagroup
 
+explore: leaderboards {
+  join: specializations {
+    relationship: many_to_one
+    sql_on: ${leaderboards.specialization} = ${specializations.specialization_id} ;;
+  }
+  join: dungeons {
+    relationship: many_to_one
+    sql_on: ${dungeons.id} = ${leaderboards.dungeon_id} ;;
+  }
+  join: classes {
+    relationship: many_to_one
+    sql_on: ${classes.id} = ${specializations.class_id} ;;
+  }
+}
+
 explore: classes {
   join: specializations {
     relationship: one_to_many
@@ -20,4 +35,9 @@ explore: classes {
   }
 }
 
-explore: dungeons {}
+explore: dungeons {
+  join: leaderboards {
+    relationship: one_to_many
+    sql_on: ${dungeons.id} = ${leaderboards.dungeon_id} ;;
+  }
+}
