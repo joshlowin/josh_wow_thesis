@@ -2,8 +2,10 @@ view: leaderboards {
   sql_table_name: mythic_leaderboards.leaderboards ;;
 
   dimension: character_id {
+    primary_key: yes
     type: number
     sql: ${TABLE}.character_id ;;
+    hidden: yes
   }
 
   dimension: character_name {
