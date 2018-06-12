@@ -18,8 +18,6 @@ explore: classes {
     relationship: one_to_many
     sql_on: ${classes.id}  = ${specializations.class_id};;
   }
-  join: leaderboards {
-    relationship: one_to_many
-    sql_on: ${specializations.specialization_id} = ${leaderboards.specialization} ;;
-  }
 }
+
+explore: dungeons {}

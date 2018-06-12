@@ -12,11 +12,6 @@ view: specializations {
     sql: ${TABLE}.class_id ;;
   }
 
-  dimension: class_name {
-    type: string
-    sql: ${TABLE}.class_name ;;
-  }
-
   dimension: specialization_name {
     type: string
     sql: ${TABLE}.specialization_name ;;
@@ -29,6 +24,6 @@ view: specializations {
 
   measure: count {
     type: count
-    drill_fields: [specialization_id, specialization_name, class_name]
+    drill_fields: [specialization_id, specialization_name]
   }
 }
