@@ -24,6 +24,6 @@ view: specializations {
 
   measure: count {
     type: count
-    drill_fields: [specialization_id, specialization_name]
+    drill_fields: [specialization_id, specialization_name, classes.class_name]
   }
 }
