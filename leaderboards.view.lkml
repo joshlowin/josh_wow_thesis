@@ -76,12 +76,7 @@ view: leaderboards {
 
   measure: count {
     type: count
-    drill_fields: [character_name, realm_name, dungeon_name, specialization]
+    drill_fields: [character_name, distinct_ids, realm_name, dungeon_name, specialization]
   }
-}
 
-#   measure: distinct_ids {
-#     type: count_distinct
-#     drill_fields: [character_id]
-#   }
-# }
+}
