@@ -70,6 +70,6 @@ view: leaderboards {
 
   measure: count {
     type: count
-    drill_fields: [character_name, realm_name, dungeon_name]
+    drill_fields: [character_name, realm_name, dungeon_name, specialization]
   }
 }

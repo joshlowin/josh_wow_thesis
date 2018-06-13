@@ -22,6 +22,11 @@ view: specializations {
     sql: ${TABLE}.type ;;
   }
 
+  dimension: type_rdps {
+    type: yesno
+    sql: ${specialization_id} IN (62,63,64,102,253,254,258,262,265,266,267) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [specialization_id, specialization_name, classes.class_name]
