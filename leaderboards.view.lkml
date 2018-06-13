@@ -5,7 +5,7 @@ view: leaderboards {
     primary_key: yes
     type: number
     sql: ${TABLE}.character_id ;;
-    hidden: yes
+     hidden: yes
   }
 
   dimension: character_name {
@@ -68,8 +68,20 @@ view: leaderboards {
     sql: ${TABLE}.specialization ;;
   }
 
+  dimension: distinct_ids {
+    type: number
+    sql: DISTINCT(${TABLE}.character_id) ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: [character_name, realm_name, dungeon_name, specialization]
   }
 }
+
+#   measure: distinct_ids {
+#     type: count_distinct
+#     drill_fields: [character_id]
+#   }
+# }
