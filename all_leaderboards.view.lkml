@@ -109,4 +109,10 @@ measure: count {
   type: count
   drill_fields: [character_name, realm_name, dungeon_name, specialization]
 }
+
+measure: avg_duration {
+  type: average
+  sql: ${duration} ;;
+  drill_fields: [character_id, character_name, specialization, avg_duration, keystone_level]
+}
 }
