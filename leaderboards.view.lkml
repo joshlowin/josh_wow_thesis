@@ -11,6 +11,7 @@ view: leaderboards {
   dimension: character_name {
     type: string
     sql: ${TABLE}.character_name ;;
+    drill_fields: [specialization]
   }
 
   dimension: completed_at {
