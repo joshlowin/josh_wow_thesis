@@ -18,79 +18,79 @@ dimension: character_id {
   type: number
   sql: ${TABLE}.character_id ;;
   hidden: no
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: character_name {
   type: string
   sql: ${TABLE}.character_name  ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: completed_at {
   type: number
   sql: ${TABLE}.completed_at ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: dungeon_id {
   type: number
   sql: ${TABLE}.dungeon_id ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: dungeon_name {
   type: string
   sql: ${TABLE}.dungeon_name ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: duration {
   type: number
   sql: ROUND(${TABLE}.duration/1000/60,2) ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: faction {
   type: string
   sql: ${TABLE}.faction ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: keystone_level {
   type: number
   sql: ${TABLE}.keystone_level ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: period {
   type: number
   sql: ${TABLE}.period ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: ranking {
   type: number
   sql: ${TABLE}.ranking ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: realm_id {
   type: number
   sql: ${TABLE}.realm_id ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: realm_name {
   type: string
   sql: ${TABLE}.realm_name ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 dimension: specialization {
   type: number
   sql: ${TABLE}.specialization ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 # dimension: class_id {
@@ -114,7 +114,7 @@ dimension: specialization {
 dimension: distinct_ids {
   type: number
   sql: DISTINCT(${TABLE}.character_id) ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
 
@@ -126,6 +126,6 @@ measure: count {
 measure: avg_duration {
   type: average
   sql: ${duration} ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 }
