@@ -23,7 +23,7 @@ dimension: character_id {
 
 dimension: character_name {
   type: string
-  sql: ${TABLE}.character_name  ;;
+  sql: ${TABLE}.character_name ;;
   drill_fields: [character_id, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
@@ -60,7 +60,7 @@ dimension: faction {
 dimension: keystone_level {
   type: number
   sql: ${TABLE}.keystone_level ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, completed_at, period]
 }
 
 dimension: period {
@@ -72,7 +72,7 @@ dimension: period {
 dimension: ranking {
   type: number
   sql: ${TABLE}.ranking ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, avg_duration, completed_at, keystone_level]
 }
 
 dimension: realm_id {
@@ -125,7 +125,7 @@ measure: count {
 
 measure: avg_duration {
   type: average
-  sql: ${duration} ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, keystone_level]
+  sql: case when ${duration}>120 then null else ${duration} end;;
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, completed_at, keystone_level]
 }
 }
