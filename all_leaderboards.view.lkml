@@ -121,6 +121,14 @@ dimension: distinct_ids {
 measure: count {
   type: count
   drill_fields: [character_name, realm_name, dungeon_name, specialization]
+  link: {
+    label:"Class Dashboard"
+    url: "https://dcl.dev.looker.com/dashboards/134"
+  }
+  link: {
+    label: "Dungeon Dashboard"
+    url: "https://dcl.dev.looker.com/dashboards/133"
+  }
 }
 
 measure: avg_duration {
