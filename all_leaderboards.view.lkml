@@ -45,10 +45,15 @@ dimension: dungeon_name {
   drill_fields: [character_id, character_name, specializations.specialization_name, avg_duration, keystone_level]
 }
 
-dimension: duration {
+dimension: time {
   type: string
-  sql: EXTRACT(TIMESTAMP FROM TIMESTAMP_MILLIS(${TABLE}.duration));;
+  sql: FORMAT_TIMESTAMP("%X", TIMESTAMP_MILLIS(${TABLE}.duration));;
   drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, keystone_level]
+}
+
+dimension: duration {
+  type: number
+  sql: ROUND(${TABLE}.duration/1000/60,4);;
 }
 
 dimension: faction {
@@ -133,7 +138,20 @@ measure: count {
 
 measure: avg_duration {
   type: average
-  sql: case when ${duration}>120 then null else ${duration} end;;
+  label: "average duration in minutes"
+  filters: {
+    field: duration
+    value: "< 120"
+  }
+  sql: ${duration} ;;
+#   hidden: yes
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, completed_at, keystone_level]
+}
+
+measure: avg_time {
+  type: string
+  sql: FORMAT_TIMESTAMP("%X", TIMESTAMP_MILLIS(CAST(${avg_duration} AS INT64))) ;;
+  hidden: yes
   drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, completed_at, keystone_level]
 }
 }
