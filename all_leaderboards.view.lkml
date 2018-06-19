@@ -28,8 +28,8 @@ dimension: character_name {
 }
 
 dimension: completed_at {
-  type: number
-  sql: ${TABLE}.completed_at ;;
+  type: string
+  sql: EXTRACT(DATE FROM TIMESTAMP_MILLIS(${TABLE}.completed_at)) ;;
   drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, keystone_level]
 }
 
@@ -47,7 +47,7 @@ dimension: dungeon_name {
 
 dimension: duration {
   type: number
-  sql: ROUND(${TABLE}.duration/1000/60,2) ;;
+  sql: ROUND(${TABLE}.duration/1000/60,2);;
   drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, keystone_level]
 }
 
