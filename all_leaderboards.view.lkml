@@ -46,8 +46,8 @@ dimension: dungeon_name {
 }
 
 dimension: duration {
-  type: number
-  sql: ROUND(${TABLE}.duration/1000/60,2);;
+  type: string
+  sql: EXTRACT(TIMESTAMP FROM TIMESTAMP_MILLIS(${TABLE}.duration));;
   drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, keystone_level]
 }
 
