@@ -24,8 +24,38 @@ dimension: character_id {
 dimension: character_name {
   type: string
   sql: ${TABLE}.character_name ;;
+  html:{% if classes.class_name._value == 'Death Knight' %}
+      <p style="background-color:#C41F3B">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Demon Hunter' %}
+      <p style="background-color:#A330C9">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Druid' %}
+      <p style="background-color:#FF7D0A">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Hunter' %}
+      <p style="background-color:#ABD473">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Mage' %}
+      <p style="background-color:#69CCF0">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Monk' %}
+      <p style="background-color:#00FF96">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Paladin' %}
+      <p style="background-color:#F58CBA">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Priest' %}
+      <p style="background-color:#dedede">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Rogue' %}
+      <p style="background-color:#FFF569">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Shaman' %}
+      <p style="background-color:#0070DE">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Warlock' %}
+      <p style="background-color:#9482C9">{{ value }}</p>
+    {% elsif classes.class_name._value == 'Warrior' %}
+      <p style="background-color:#C79C6E">{{ value }}</p>
+    {% endif %};;
   drill_fields: [character_id, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
+
+
+
+
+
 
 dimension: completed_at {
   type: string
@@ -95,6 +125,7 @@ dimension: realm_name {
 dimension: specialization {
   type: number
   sql: ${TABLE}.specialization ;;
+  hidden: yes
   drill_fields: [character_id, character_name, specializations.specialization_name]
 }
 
@@ -125,7 +156,7 @@ dimension: distinct_ids {
 
 measure: count {
   type: count
-  drill_fields: [character_name, realm_name, dungeon_name, specialization]
+  drill_fields: [time, character_name, realm_name, dungeon_name, specializations.specialization_name]
   link: {
     label:"Class Dashboard"
     url: "https://dcl.dev.looker.com/dashboards/134"
