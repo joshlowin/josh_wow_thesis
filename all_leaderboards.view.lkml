@@ -52,11 +52,6 @@ dimension: character_name {
   drill_fields: [character_id, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
-
-
-
-
-
 dimension: completed_at {
   type: string
   sql: EXTRACT(DATE FROM TIMESTAMP_MILLIS(${TABLE}.completed_at)) ;;
@@ -166,6 +161,304 @@ measure: count {
     url: "https://dcl.dev.looker.com/dashboards/133"
   }
 }
+
+## measure groups for spec type and individual count
+
+measure: arcane_count {
+  group_label: "dps_counts"
+  type: count
+  filters: {
+    field: specialization
+    value: "=62"
+  }
+}
+measure: fire_count {
+  group_label: "dps_counts"
+  type: count
+  filters: {
+    field: specialization
+    value: "=63"
+  }
+}
+  measure: frost_mage_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=64"
+    }
+  }
+
+  measure: holy_pala_count {
+    group_label: "healer_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=65"
+    }
+  }
+
+  measure: prot_pala_count {
+    group_label: "tank_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=66"
+    }
+  }
+
+  measure: retribution_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=70"
+    }
+  }
+
+  measure: arms_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=71"
+    }
+  }
+
+  measure: fury_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=72"
+    }
+  }
+  measure: prot_warr_count {
+    group_label: "tank_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=73"
+    }
+  }
+  measure: balance_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=102"
+    }
+  }
+  measure: feral_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=103"
+    }
+  }
+measure: guardian_count {
+  group_label: "tank_counts"
+  type: count
+  filters: {
+    field: specialization
+    value: "=104"
+  }
+}
+measure: resto_druid_count {
+  group_label: "healer_counts"
+  type: count
+  filters: {
+    field: specialization
+    value: "=105"
+  }
+}
+  measure: blood_count {
+    group_label: "tank_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=250"
+    }
+  }
+  measure: frost_dk_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=251"
+    }
+  }
+  measure: unholy_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=252"
+    }
+  }
+  measure: beast_mastery_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=253"
+    }
+  }
+  measure: marksmanship_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=254"
+    }
+  }
+    measure: survival_count {
+      group_label: "dps_counts"
+      type: count
+      filters: {
+        field: specialization
+        value: "=255"
+      }
+    }
+  measure: discipline_count {
+    group_label: "healer_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=256"
+    }
+  }
+  measure: holy_priest_count {
+    group_label: "healer_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=257"
+    }
+  }
+  measure: shadow_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=258"
+    }
+  }
+  measure: assassination_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=259"
+    }
+  }
+  measure: outlaw_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=260"
+    }
+  }
+  measure: subtlety_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=261"
+    }
+  }
+  measure: elemental_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=262"
+    }
+  }
+  measure: enhancement_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=263"
+    }
+  }
+  measure: resto_sham_count {
+    group_label: "healer_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=264"
+    }
+  }
+  measure: affliction_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=265"
+    }
+  }
+  measure: demonology_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=266"
+    }
+  }
+  measure: destruction_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=267"
+    }
+  }
+  measure: brewmaster_count {
+    group_label: "tank_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=268"
+    }
+  }
+  measure: windwalker_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=269"
+    }
+  }
+  measure: mistweaver_count {
+    group_label: "healer_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=270"
+    }
+  }
+  measure: havoc_count {
+    group_label: "dps_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=577"
+    }
+  }
+  measure: vengeance_count {
+    group_label: "tank_counts"
+    type: count
+    filters: {
+      field: specialization
+      value: "=581"
+    }
+  }
+
+## END OF SPEC COUNTS
 
 measure: avg_duration {
   type: average
