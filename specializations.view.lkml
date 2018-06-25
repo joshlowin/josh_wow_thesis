@@ -12,7 +12,7 @@ view: specializations {
     sql: ${TABLE}.class_id ;;
   }
 
-  dimension: specialization_name {
+ dimension: specialization_name {
     type: string
     sql: case when ${specialization_id}=66 then "Prot Pala"
               when ${specialization_id}=64 then "Frost Mage"
@@ -24,7 +24,11 @@ view: specializations {
               when ${specialization_id}=264 then "Resto Sham"
               else
               ${TABLE}.specialization_name end;;
-    html:   {% if value == 'Arcane' %}
+              }
+  dimension: specialization_icon {
+    type: string
+    sql: ${TABLE}.specialization_name ;;
+    html: {% if value == 'Arcane' %}
     <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/7d/Arc_Spec_RoundIcon.png/revision/latest?cb=20070523204450"  height="20" width="20" />
     {% elsif value == 'Fire' %}
     <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c8/Fire_Spec_RoundIcon.png/revision/latest?cb=20070523205204" height="20" width="20" />
