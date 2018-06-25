@@ -65,7 +65,7 @@ view: specializations {
     <img src="https://vignette.wikia.nocookie.net/wowwiki/images/4/4b/DResto_Spec_RoundIcon.png/revision/latest?cb=20070523204931" height="20" width="20" />
     {% elsif value == 'Blood' %}
     <img src="https://vignette.wikia.nocookie.net/wowwiki/images/e/ee/Blood_Spec_RoundIcon.png/revision/latest?cb=20090105191528" height="20" width="20" />
-    {% elsif value == 'Frost dk' %}
+    {% elsif value == 'Frost DK' %}
     <img src="https://vignette.wikia.nocookie.net/wowwiki/images/a/ae/DkFrost_Spec_RoundIcon.png/revision/latest?cb=20090105191053" height="20" width="20" />
     {% elsif value == 'Unholy' %}
     <img src="https://vignette.wikia.nocookie.net/wowwiki/images/1/1f/Unholy_Spec_RoundIcon.png/revision/latest?cb=20090105191541" height="20" width="20" />
