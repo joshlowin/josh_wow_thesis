@@ -38,77 +38,77 @@ view: specializations {
               else
               ${TABLE}.specialization_name end;;
     html: {% if value == 'Arcane' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/7d/Arc_Spec_RoundIcon.png/revision/latest?cb=20070523204450"  height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/7d/Arc_Spec_RoundIcon.png/revision/latest?cb=20070523204450"  height="21" width="21" />
     {% elsif value == 'Fire' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c8/Fire_Spec_RoundIcon.png/revision/latest?cb=20070523205204" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c8/Fire_Spec_RoundIcon.png/revision/latest?cb=20070523205204" height="21" width="21" />
     {% elsif value == 'Frost Mage' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/b/b5/Frost_Spec_RoundIcon.png/revision/latest?cb=20070523205315"  height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/b/b5/Frost_Spec_RoundIcon.png/revision/latest?cb=20070523205315"  height="21" width="21" />
     {% elsif value == 'Holy Pala' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/e/ef/PaHoly_Spec_RoundIcon.png/revision/latest?cb=20070523205654" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/e/ef/PaHoly_Spec_RoundIcon.png/revision/latest?cb=20070523205654" height="21" width="21" />
     {% elsif value == 'Prot Pala' %}
-   <img src="https://vignette.wikia.nocookie.net/wowwiki/images/0/09/PProt_Spec_RoundIcon.png/revision/latest?cb=20070523205725" height="20" width="20" />
+   <img src="https://vignette.wikia.nocookie.net/wowwiki/images/0/09/PProt_Spec_RoundIcon.png/revision/latest?cb=20070523205725" height="21" width="21" />
     {% elsif value == 'Retribution' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/9e/Ret_Spec_RoundIcon.png/revision/latest?cb=20070523205815" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/9e/Ret_Spec_RoundIcon.png/revision/latest?cb=20070523205815" height="21" width="21" />
     {% elsif value == 'Arms' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/98/APB_Warrior_Arms.png/revision/latest?cb=20130406024148" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/98/APB_Warrior_Arms.png/revision/latest?cb=20130406024148" height="21" width="21" />
     {% elsif value == 'Fury' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/2/2f/Fury_Spec_RoundIcon.png/revision/latest?cb=20070523205252" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/2/2f/Fury_Spec_RoundIcon.png/revision/latest?cb=20070523205252" height="21" width="21" />
     {% elsif value == 'Prot Warr' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c6/WProt_Spec_RoundIcon.png/revision/latest?cb=20070523210134" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c6/WProt_Spec_RoundIcon.png/revision/latest?cb=20070523210134" height="21" width="21" />
     {% elsif value == 'Balance' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/5/5e/Bal_Spec_RoundIcon.png/revision/latest?cb=20070523204553" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/5/5e/Bal_Spec_RoundIcon.png/revision/latest?cb=20070523204553" height="21" width="21" />
     {% elsif value == 'Feral' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/72/New_Feral_Spec_RoundIcon.png/revision/latest?cb=20120429151803" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/72/New_Feral_Spec_RoundIcon.png/revision/latest?cb=20120429151803" height="21" width="21" />
     {% elsif value == 'Guardian' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/8/8b/Feral_Spec_RoundIcon.png/revision/latest?cb=20070523205144" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/8/8b/Feral_Spec_RoundIcon.png/revision/latest?cb=20070523205144" height="21" width="21" />
     {% elsif value == 'Resto Druid' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/4/4b/DResto_Spec_RoundIcon.png/revision/latest?cb=20070523204931" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/4/4b/DResto_Spec_RoundIcon.png/revision/latest?cb=20070523204931" height="21" width="21" />
     {% elsif value == 'Blood' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/e/ee/Blood_Spec_RoundIcon.png/revision/latest?cb=20090105191528" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/e/ee/Blood_Spec_RoundIcon.png/revision/latest?cb=20090105191528" height="21" width="21" />
     {% elsif value == 'Frost DK' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/a/ae/DkFrost_Spec_RoundIcon.png/revision/latest?cb=20090105191053" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/a/ae/DkFrost_Spec_RoundIcon.png/revision/latest?cb=20090105191053" height="21" width="21" />
     {% elsif value == 'Unholy' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/1/1f/Unholy_Spec_RoundIcon.png/revision/latest?cb=20090105191541" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/1/1f/Unholy_Spec_RoundIcon.png/revision/latest?cb=20090105191541" height="21" width="21" />
     {% elsif value == 'Beast Mastery' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/0/03/BM_Spec_RoundIcon.png/revision/latest?cb=20070523204646" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/0/03/BM_Spec_RoundIcon.png/revision/latest?cb=20070523204646" height="21" width="21" />
     {% elsif value == 'Marksmanship' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/9b/Marks_Spec_RoundIcon.png/revision/latest?cb=20070523205514" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/9b/Marks_Spec_RoundIcon.png/revision/latest?cb=20070523205514" height="21" width="21" />
     {% elsif value == 'Survival' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c2/Surv_Spec_RoundIcon.png/revision/latest?cb=20070523210031" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c2/Surv_Spec_RoundIcon.png/revision/latest?cb=20070523210031" height="21" width="21" />
     {% elsif value == 'Discipline' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/f/f9/Disc_Spec_RoundIcon.png/revision/latest?cb=20070523204910" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/f/f9/Disc_Spec_RoundIcon.png/revision/latest?cb=20070523204910" height="21" width="21" />
     {% elsif value == 'Holy Priest' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/e/ef/PaHoly_Spec_RoundIcon.png/revision/latest?cb=20070523205654" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/e/ef/PaHoly_Spec_RoundIcon.png/revision/latest?cb=20070523205654" height="21" width="21" />
     {% elsif value == 'Shadow' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/4/47/Shad_Spec_RoundIcon.png/revision/latest?cb=20070523205847" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/4/47/Shad_Spec_RoundIcon.png/revision/latest?cb=20070523205847" height="21" width="21" />
     {% elsif value == 'Assassination' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/2/2e/Arms_Spec_RoundIcon.png/revision/latest?cb=20070523204515" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/2/2e/Arms_Spec_RoundIcon.png/revision/latest?cb=20070523204515" height="21" width="21" />
     {% elsif value == 'Outlaw' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/a/a5/APB_Rogue_Combat.png/revision/latest?cb=20070702155455" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/a/a5/APB_Rogue_Combat.png/revision/latest?cb=20070702155455" height="21" width="21" />
     {% elsif value == 'Subtlety' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/90/Subt_Spec_RoundIcon.png/revision/latest?cb=20070523210015" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/90/Subt_Spec_RoundIcon.png/revision/latest?cb=20070523210015" height="21" width="21" />
     {% elsif value == 'Elemental' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c6/Elem_Spec_RoundIcon.png/revision/latest?cb=20070523204952" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/c/c6/Elem_Spec_RoundIcon.png/revision/latest?cb=20070523204952" height="21" width="21" />
     {% elsif value == 'Enhancement' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/a/a3/Enh_Spec_RoundIcon.png/revision/latest?cb=20070523205101" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/a/a3/Enh_Spec_RoundIcon.png/revision/latest?cb=20070523205101" height="21" width="21" />
     {% elsif value == 'Resto Sham' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/76/SResto_Spec_RoundIcon.png/revision/latest?cb=20070523205959" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/76/SResto_Spec_RoundIcon.png/revision/latest?cb=20070523205959" height="21" width="21" />
     {% elsif value == 'Affliction' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/b/be/Affl_spec_roundicon.png/revision/latest?cb=20070523204347" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/b/be/Affl_spec_roundicon.png/revision/latest?cb=20070523204347" height="21" width="21" />
     {% elsif value == 'Demonology' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/9f/Demon_Spec_RoundIcon.png/revision/latest?cb=20070523204833" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/9/9f/Demon_Spec_RoundIcon.png/revision/latest?cb=20070523204833" height="21" width="21" />
     {% elsif value == 'Destruction' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/6/69/Destro_Spec_RoundIcon.png/revision/latest?cb=20070523204852" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/6/69/Destro_Spec_RoundIcon.png/revision/latest?cb=20070523204852" height="21" width="21" />
     {% elsif value == 'Brewmaster' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/d/dc/Brew_Spec_RoundIcon.png/revision/latest?cb=20120429150652" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/d/dc/Brew_Spec_RoundIcon.png/revision/latest?cb=20120429150652" height="21" width="21" />
     {% elsif value == 'Windwalker' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/d/db/Wind_Spec_RoundIcon.png/revision/latest?cb=20120429150653" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/d/db/Wind_Spec_RoundIcon.png/revision/latest?cb=20120429150653" height="21" width="21" />
     {% elsif value == 'Mistweaver' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/1/1f/Mist_Spec_RoundIcon.png/revision/latest?cb=20120429150652" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/1/1f/Mist_Spec_RoundIcon.png/revision/latest?cb=20120429150652" height="21" width="21" />
     {% elsif value == 'Havoc' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/d/d5/IconSmall_Illidan.gif/revision/latest?cb=20090303210737" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/d/d5/IconSmall_Illidan.gif/revision/latest?cb=20090303210737" height="21" width="21" />
     {% elsif value == 'Vengeance' %}
-    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/6/69/IconSmall_Supremus.gif/revision/latest?cb=20090308114003" height="20" width="20" />
+    <img src="https://vignette.wikia.nocookie.net/wowwiki/images/6/69/IconSmall_Supremus.gif/revision/latest?cb=20090308114003" height="21" width="21" />
     {% endif %};;
   }
 
