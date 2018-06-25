@@ -27,7 +27,16 @@ view: specializations {
               }
   dimension: spec_icon {
     type: string
-    sql: ${TABLE}.specialization_name ;;
+    sql: case when ${specialization_id}=66 then "Prot Pala"
+              when ${specialization_id}=64 then "Frost Mage"
+              when ${specialization_id}=65 then "Holy Pala"
+              when ${specialization_id}=73 then "Prot Warr"
+              when ${specialization_id}=105 then "Resto Druid"
+              when ${specialization_id}=251 then "Frost DK"
+              when ${specialization_id}=257 then "Holy Priest"
+              when ${specialization_id}=264 then "Resto Sham"
+              else
+              ${TABLE}.specialization_name end;;
     html: {% if value == 'Arcane' %}
     <img src="https://vignette.wikia.nocookie.net/wowwiki/images/7/7d/Arc_Spec_RoundIcon.png/revision/latest?cb=20070523204450"  height="20" width="20" />
     {% elsif value == 'Fire' %}
