@@ -18,7 +18,7 @@ dimension: character_id {
   type: number
   sql: ${TABLE}.character_id ;;
   hidden: no
-  drill_fields: [character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
+  drill_fields: [character_name, specializations.specialization_name, dungeon_name, time, avg_duration, keystone_level]
 }
 
 dimension: character_name {
@@ -90,13 +90,13 @@ dimension: faction {
 dimension: keystone_level {
   type: number
   sql: ${TABLE}.keystone_level ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, completed_at, period]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, time, avg_duration, completed_at, period]
 }
 
 dimension: period {
   type: number
   sql: ${TABLE}.period ;;
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, time, avg_duration, keystone_level]
 }
 
 dimension: ranking {
@@ -145,7 +145,7 @@ dimension: specialization {
 dimension: distinct_ids {
   type: number
   sql: DISTINCT(${TABLE}.character_id) ;;
-  drill_fields: [character_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
+  drill_fields: [character_name, specializations.specialization_name, dungeon_name, time, avg_duration, keystone_level]
 }
 
 
@@ -469,13 +469,13 @@ measure: avg_duration {
   }
   sql: ${duration} ;;
 #   hidden: yes
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, completed_at, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
 }
 
 measure: avg_time {
   type: string
   sql: FORMAT_TIMESTAMP("%X", TIMESTAMP_MILLIS(CAST(${avg_duration} AS INT64))) ;;
   hidden: yes
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, duration, completed_at, keystone_level]
+  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
 }
 }
