@@ -25,7 +25,7 @@ view: specializations {
               else
               ${TABLE}.specialization_name end;;
               }
-  dimension: specialization_icon {
+  dimension: spec_icon {
     type: string
     sql: ${TABLE}.specialization_name ;;
     html: {% if value == 'Arcane' %}
