@@ -14,7 +14,6 @@
   }
 
 dimension: character_id {
-#   primary_key: yes
   type: number
   sql: ${TABLE}.character_id ;;
   hidden: yes
