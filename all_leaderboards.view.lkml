@@ -57,6 +57,20 @@ dimension: character_name {
   drill_fields: [character_id, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
+  measure: count {
+    type: count_distinct
+    sql: ${uid} ;;
+    drill_fields: [time, character_name, realm_name, dungeon_name, specializations.specialization_name]
+    link: {
+      label:"Class Dashboard"
+      url: "https://dcl.dev.looker.com/dashboards/134"
+    }
+    link: {
+      label: "Dungeon Dashboard"
+      url: "https://dcl.dev.looker.com/dashboards/133"
+    }
+  }
+
 dimension: completed_at {
   type: string
   sql: EXTRACT(DATE FROM TIMESTAMP_MILLIS(${TABLE}.completed_at)) ;;
@@ -157,21 +171,6 @@ measure: retained_player {
   type: number
   value_format: "0.00\%"
   sql:  LAG(${count}) over (partition by specializations.specialization_name order by ${keystone_level});;
-}
-
-
-measure: count {
-  type: count_distinct
-  sql: ${uid} ;;
-  drill_fields: [time, character_name, realm_name, dungeon_name, specializations.specialization_name]
-  link: {
-    label:"Class Dashboard"
-    url: "https://dcl.dev.looker.com/dashboards/134"
-  }
-  link: {
-    label: "Dungeon Dashboard"
-    url: "https://dcl.dev.looker.com/dashboards/133"
-  }
 }
 
 measure: period_growth {
