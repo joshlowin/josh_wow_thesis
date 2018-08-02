@@ -14,11 +14,17 @@
   }
 
 dimension: character_id {
-  primary_key: yes
+#   primary_key: yes
   type: number
   sql: ${TABLE}.character_id ;;
-  hidden: no
+  hidden: yes
   drill_fields: [character_name, specializations.specialization_name, dungeon_name, time, avg_duration, keystone_level]
+}
+
+dimension: uid {
+  primary_key: yes
+  type: string
+  sql: CONCAT(CAST(${character_id} AS STRING),"-",CAST(${realm_id} AS STRING),"-",CAST(${dungeon_id} AS STRING),"-",CAST(${duration} AS STRING),"-",CAST(${keystone_level} AS STRING)) ;;
 }
 
 dimension: character_name {
@@ -148,9 +154,16 @@ dimension: distinct_ids {
   drill_fields: [character_name, specializations.specialization_name, dungeon_name, time, avg_duration, keystone_level]
 }
 
+measure: retained_player {
+  type: number
+  value_format: "0.00\%"
+  sql:  LAG(${count}) over (partition by specializations.specialization_name order by ${keystone_level});;
+}
+
 
 measure: count {
-  type: count
+  type: count_distinct
+  sql: ${uid} ;;
   drill_fields: [time, character_name, realm_name, dungeon_name, specializations.specialization_name]
   link: {
     label:"Class Dashboard"
@@ -160,6 +173,16 @@ measure: count {
     label: "Dungeon Dashboard"
     url: "https://dcl.dev.looker.com/dashboards/133"
   }
+}
+
+measure: period_growth {
+  type: percent_of_previous
+  sql: ${count} ;;
+}
+
+measure: duration_growth {
+  type: percent_of_previous
+  sql: ${avg_duration} ;;
 }
 
 ## measure groups for spec type and individual count
