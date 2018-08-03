@@ -479,7 +479,7 @@ measure: resto_druid_count {
     }
   }
 
-## END OF SPEC COUNTS
+## END OF SPEC COUNTS - change for API
 
 measure: avg_duration {
   type: average
