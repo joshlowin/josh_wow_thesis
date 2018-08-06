@@ -145,24 +145,6 @@ dimension: specialization {
   drill_fields: [character_id, character_name, specializations.specialization_name]
 }
 
-# dimension: class_id {
-#   type: string
-#   sql: CASE
-#       when ${specialization} in (62,63,64) then 'Mage'
-#       when ${specialization} in (65,66,70) then 'Paladin'
-#       when ${specialization} in (71,72,73) then 'Warrior'
-#       when ${specialization} in (102,103,104,105) then 'Druid'
-#       when ${specialization} in (250,251,252) then 'Death Knight'
-#       when ${specialization} in (253,254,255) then 'Hunter'
-#       when ${specialization} in (256,257,258) then 'Priest'
-#       when ${specialization} in (259,260,261) then 'Rogue'
-#       when ${specialization} in (262,263,264) then 'Shaman'
-#       when ${specialization} in (266,267,268) then 'Warlock'
-#       when ${specialization} in (268,269,270) then 'Monk'
-#       when ${specialization} in (577,581) then 'Demon Hunter'
-#       else null end;;
-# }
-
 dimension: distinct_ids {
   type: number
   sql: DISTINCT(${TABLE}.character_id) ;;
@@ -481,7 +463,7 @@ measure: resto_druid_count {
     }
   }
 
-## END OF SPEC COUNTS - change for API
+## END OF SPEC COUNTS
 
 measure: avg_duration {
   type: average
