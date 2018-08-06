@@ -23,7 +23,9 @@ dimension: character_id {
 dimension: uid {
   primary_key: yes
   type: string
-  sql: CONCAT(CAST(${character_id} AS STRING),"-",CAST(${realm_id} AS STRING),"-",CAST(${dungeon_id} AS STRING),"-",CAST(${duration} AS STRING),"-",CAST(${keystone_level} AS STRING)) ;;
+  sql: CONCAT(CAST(${character_id} AS STRING),"-",CAST(${realm_id} AS STRING),"-",
+              CAST(${dungeon_id} AS STRING),"-",CAST(${duration} AS STRING),"-",
+              CAST(${keystone_level} AS STRING)) ;;
 }
 
 dimension: character_name {
