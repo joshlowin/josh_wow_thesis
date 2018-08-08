@@ -32,29 +32,29 @@ dimension: character_name {
   type: string
   sql: ${TABLE}.character_name ;;
   html:{% if classes.class_name._value == 'Death Knight' %}
-      <p style="background-color:#C41F3B">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF, #C41F3B)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Demon Hunter' %}
-      <p style="background-color:#A330C9">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#A330C9)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Druid' %}
-      <p style="background-color:#FF7D0A">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#FF7D0A)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Hunter' %}
-      <p style="background-color:#ABD473">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#ABD473)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Mage' %}
-      <p style="background-color:#69CCF0">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#69CCF0)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Monk' %}
-      <p style="background-color:#00FF96">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#00FF96)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Paladin' %}
-      <p style="background-color:#F58CBA">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#F58CBA)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Priest' %}
-      <p style="background-color:#dedede">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#dedede)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Rogue' %}
-      <p style="background-color:#FFF569">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#FFF569)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Shaman' %}
-      <p style="background-color:#0070DE">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#0070DE)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Warlock' %}
-      <p style="background-color:#9482C9">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#9482C9)">{{ value }}</p>
     {% elsif classes.class_name._value == 'Warrior' %}
-      <p style="background-color:#C79C6E">{{ value }}</p>
+      <p style="background:linear-gradient(to right, #FFFFFF,#C79C6E)">{{ value }}</p>
     {% endif %};;
   drill_fields: [character_id, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
