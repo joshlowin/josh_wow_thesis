@@ -467,7 +467,7 @@ measure: resto_druid_count {
 
 measure: avg_duration {
   type: average
-  label: "average duration in minutes"
+  label: "Average Duration in Minutes"
   filters: {
     field: duration
     value: "< 120"
