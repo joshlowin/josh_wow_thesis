@@ -27,5 +27,3 @@ explore: all_leaderboards {
     sql_on: ${classes.id} = ${specializations.class_id} ;;
   }
 }
-
-explore: fraud_detection {}

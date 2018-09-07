@@ -17,7 +17,7 @@ dimension: character_id {
   type: number
   sql: ${TABLE}.character_id ;;
   hidden: yes
-  drill_fields: [character_name, specializations.specialization_name, dungeon_name, time, avg_duration, keystone_level]
+  drill_fields: [character_name,classes.class_name, specializations.specialization_name, dungeon_name, time, avg_duration, keystone_level]
 }
 
 dimension: uid {
@@ -56,20 +56,20 @@ dimension: character_name {
     {% elsif classes.class_name._value == 'Warrior' %}
       <p style="background:linear-gradient(to right, #FFFFFF,#C79C6E)">{{ value }}</p>
     {% endif %};;
-  drill_fields: [character_id, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
+  drill_fields: [character_id, classes.class_name, specializations.specialization_name, dungeon_name, duration, avg_duration, keystone_level]
 }
 
   measure: count {
     type: count_distinct
     sql: ${uid} ;;
-    drill_fields: [time, character_name, realm_name, dungeon_name, specializations.specialization_name]
+    drill_fields: [time, character_name, realm_name, dungeon_name, classes.class_name, specializations.specialization_name]
     link: {
       label:"Class Dashboard"
-      url: "https://dcl.dev.looker.com/dashboards/134"
+      url: "https://dcl.dev.looker.com/dashboards/203"
     }
     link: {
       label: "Dungeon Dashboard"
-      url: "https://dcl.dev.looker.com/dashboards/133"
+      url: "https://dcl.dev.looker.com/dashboards/205"
     }
   }
 
@@ -474,13 +474,13 @@ measure: avg_duration {
   }
   sql: ${duration} ;;
 #   hidden: yes
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
+  drill_fields: [character_id, character_name, classes.class_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
 }
 
 measure: avg_time {
   type: string
   sql: FORMAT_TIMESTAMP("%X", TIMESTAMP_MILLIS(CAST(${avg_duration} AS INT64))) ;;
   hidden: yes
-  drill_fields: [character_id, character_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
+  drill_fields: [character_id, character_name, classes.class_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
 }
 }
