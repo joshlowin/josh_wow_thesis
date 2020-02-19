@@ -2,6 +2,8 @@ connection: "lookerdata_standard_sql"
 
 # include all the views
 include: "*.view"
+include: "*.dashboard.lookml"
+
 
 # include all the dashboards
 # include: "*.dashboard"
