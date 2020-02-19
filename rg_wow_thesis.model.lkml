@@ -6,12 +6,12 @@ include: "*.view"
 # include all the dashboards
 # include: "*.dashboard"
 
-datagroup: josh_wow_thesis_default_datagroup {
+datagroup: rg_wow_thesis_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
-persist_with: josh_wow_thesis_default_datagroup
+persist_with: rg_wow_thesis_default_datagroup
 
 explore: all_leaderboards {
   join: specializations {
