@@ -41,29 +41,29 @@ view: classes {
     type: string
     sql: ${TABLE}.class_name ;;
     html:{% if value == 'Death Knight' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/5/5d/Death_Knight_Crest.png?version=b7f245e0515a2541a09d102fbb0ed52f" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Death_Knight_Crest.png" />
     {% elsif value == 'Demon Hunter' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/0/00/Demon_Hunter_Crest.png?version=bf68bd5041d36b5ea73b21d9b77867d1" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Demon_Hunter_Crest.png" />
     {% elsif value == 'Druid' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/e/ec/Druid_Crest.png?version=b6a65db303b9320235dc47747b11ffe3" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Druid_Crest.png" />
     {% elsif value == 'Hunter' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/3/3e/Hunter_Crest.png?version=b1d25c78b98d82889b293796f1ed7513" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Hunter_Crest.png" />
     {% elsif value == 'Mage' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/0/04/Mage_Crest.png?version=00383a73f5d77cb31d11c5425b2a508d" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Mage_Crest.png" />
     {% elsif value == 'Monk' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/a/a4/Pandaren_Crest.png?version=7e95ace156e71e5cfc9ca9fcec2bc2ea" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Monk_Crest.png" />
     {% elsif value == 'Paladin' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/8/82/Paladin_Crest.png?version=7a719f0d395c4a8a3d2b53897616e6b7" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Paladin_Crest.png" />
     {% elsif value == 'Priest' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/5/50/Priest_Crest.png?version=0a2f5a12ca1c2a287ca55ebdd1c01adc" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Priest_Crest.png" />
     {% elsif value == 'Rogue' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/0/02/Rogue_Crest.png?version=d833a1f63405c5085e8e32393e2c642b" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Rogue_Crest.png" />
     {% elsif value == 'Shaman' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/d/d2/Shaman_Crest.png?version=4974dbe01c70e8046d0309f86dfbd0ac" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Shaman_Crest.png" />
     {% elsif value == 'Warlock' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/5/5e/Warlock_Crest.png?version=216361af51eef1e4c28f153e552cb8cb" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Warlock_Crest.png" />
     {% elsif value == 'Warrior' %}
-    <img src="https://d1u5p3l4wpay3k.cloudfront.net/wowpedia/4/4f/Warrior_Crest.png?version=28165d45446d9b38d50aa8f12c523a79" />
+    <img src="https://wowcrests.s3-us-west-1.amazonaws.com/Warrior_Crest.png" />
     {% endif %} ;;
   }
 

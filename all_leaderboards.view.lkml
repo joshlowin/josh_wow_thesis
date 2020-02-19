@@ -99,8 +99,20 @@ dimension: time {
 
 dimension: duration {
   type: number
-  sql: ROUND(${TABLE}.duration/1000/60,4);;
+  sql: ROUND(${TABLE}.duration/1000,4);;
 }
+
+  measure: avg_duration {
+    type: average
+    label: "Average Duration in Seconds"
+    filters: {
+      field: duration
+      value: "< 12000"
+    }
+    sql: ${duration} ;;
+#   hidden: yes
+    drill_fields: [character_id, character_name, classes.class_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
+  }
 
 dimension: faction {
   type: string
@@ -465,17 +477,7 @@ measure: resto_druid_count {
 
 ## END OF SPEC COUNTS
 
-measure: avg_duration {
-  type: average
-  label: "Average Duration in Minutes"
-  filters: {
-    field: duration
-    value: "< 120"
-  }
-  sql: ${duration} ;;
-#   hidden: yes
-  drill_fields: [character_id, character_name, classes.class_name, specializations.specialization_name, dungeon_name, time, completed_at, keystone_level]
-}
+
 
 measure: avg_time {
   type: string
