@@ -65,11 +65,11 @@ dimension: character_name {
     drill_fields: [time, character_name, realm_name, dungeon_name, classes.class_name, specializations.specialization_name]
     link: {
       label:"Class Dashboard"
-      url: "https://dcl.dev.looker.com/dashboards/203"
+      url: "https://dcl.dev.looker.com/dashboards/607"
     }
     link: {
       label: "Dungeon Dashboard"
-      url: "https://dcl.dev.looker.com/dashboards/205"
+      url: "https://dcl.dev.looker.com/dashboards/608"
     }
   }
 
