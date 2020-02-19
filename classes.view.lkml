@@ -35,6 +35,10 @@ view: classes {
     {% elsif value == 'Warrior' %}
     <font color="#C79C6E">{{ value }}</font>
     {% endif %};;
+    link: {
+       label:"Class Dashboard"
+       url: "https://dcl.dev.looker.com/dashboards/607?Class={{ value | encode_uri }}"
+     }
   }
 
   dimension: class_crest {

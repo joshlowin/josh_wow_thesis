@@ -62,15 +62,7 @@ dimension: character_name {
   measure: count {
     type: count_distinct
     sql: ${uid} ;;
-    drill_fields: [time, character_name, realm_name, dungeon_name, classes.class_name, specializations.specialization_name]
-    link: {
-      label:"Class Dashboard"
-      url: "https://dcl.dev.looker.com/dashboards/607"
-    }
-    link: {
-      label: "Dungeon Dashboard"
-      url: "https://dcl.dev.looker.com/dashboards/608"
-    }
+     drill_fields: [time, character_name, realm_name, dungeon_name, classes.class_name, specializations.specialization_name]
   }
 
 dimension: completed_at {
@@ -89,6 +81,10 @@ dimension: dungeon_name {
   type: string
   sql: ${TABLE}.dungeon_name ;;
   drill_fields: [character_id, character_name, specializations.specialization_name, avg_duration, keystone_level]
+  link: {
+    label: "Dungeon Dashboard"
+    url: "https://dcl.dev.looker.com/dashboards/608?Dungeon%20Name={{ value | encode_uri }}"
+  }
 }
 
 dimension: time {
