@@ -74,6 +74,10 @@ view: leaderboards {
     sql: DISTINCT(${TABLE}.character_id) ;;
   }
 
+  #dimension: team_id {
+  #  type: string
+  #  sql: concat(to_string(${completed_at}),to_string(${dungeon_id}),to_string(${duration}),to_string(${faction}),to_string(${keystone_level})) ;;
+  #}
 
   measure: count {
     type: count

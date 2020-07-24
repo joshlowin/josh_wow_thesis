@@ -29,3 +29,9 @@ explore: all_leaderboards {
     sql_on: ${classes.id} = ${specializations.class_id} ;;
   }
 }
+
+explore: team_composition  {}
+
+# Each team_id has 5 entries, one for each player.
+#I want to get a list of unique specialization combinations
+#I want a count of each specialization combination for each distinct team

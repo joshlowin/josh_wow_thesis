@@ -1,4 +1,4 @@
- view: all_leaderboards {
+view: all_leaderboards {
   derived_table: {
     sql: SELECT character_id, character_name, completed_at, dungeon_id, dungeon_name,duration, faction, keystone_level,period, ranking, realm_id, realm_name, specialization FROM mythic_leaderboards.leaderboards
     UNION DISTINCT
@@ -27,6 +27,22 @@ dimension: uid {
               CAST(${dungeon_id} AS STRING),"-",CAST(${duration} AS STRING),"-",
               CAST(${keystone_level} AS STRING)) ;;
 }
+  dimension: team_id {
+    type: string
+    sql: concat(CAST(${keystone_level} AS STRING),"-",
+    CAST(${dungeon_id} AS STRING),"-",
+    CAST(${duration} AS STRING),"-",
+    CAST(${completed_at} AS STRING),"-",
+    SUBSTR(${faction},1,1)) ;;
+  }
+
+  measure: spec_list {
+    type: list
+    list_field: specializations.specialization_name
+  }
+  # I want a list of unique spec combinations at the team level and a count of how often each one occurs.
+
+
 
 dimension: character_name {
   type: string

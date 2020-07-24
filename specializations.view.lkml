@@ -24,7 +24,13 @@ view: specializations {
               when ${specialization_id}=264 then "Resto Sham"
               else
               ${TABLE}.specialization_name end;;
-              }
+  }
+
+  measure: spec_list {
+    type: list
+    list_field: specializations.specialization_name
+  }
+
   dimension: spec_icon {
     type: string
     sql: case when ${specialization_id}=66 then "Prot Pala"
